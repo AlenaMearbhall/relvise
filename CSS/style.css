@@ -772,16 +772,13 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
     position: relative;
     z-index: 2;
     margin: 0px 30px;
-    display: flex;
     padding: 30px 50px;
     align-items: center;
     background: #17213C;
     border-radius: 2px;
-    justify-content: space-between;
 }
 
 .subscribe__title {
-    max-width: 266px;
     font-weight: 700;
     font-size: 24px;
     line-height: 133%;
@@ -796,6 +793,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
 }
 
 .subscribe__input {
+    width: 100%;
     flex: 1 1 auto;
     min-height: 58px;
     padding: 0px 20px;
@@ -875,6 +873,32 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
 
     .whoweare__header {
         margin: 0px 0px 30px 0px;
+    }
+}
+
+@media (min-width: 810px) {
+    .subscribe__title {
+        max-width: 266px;
+    }
+    .subscribe__body {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 810px) {
+    .subscribe__title {
+        margin: 0px 0px 20px 0px;
+    }
+    .subscribe__body {
+        margin: 0px -15px;
+        padding: 20px 25px;
+    }
+    .form__button {
+        padding: 0px 15px;
+    }
+    .subscribe__input {
+        padding: 0px 15px;
     }
 }
 

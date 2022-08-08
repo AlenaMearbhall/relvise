@@ -29,7 +29,7 @@ html,body {
     font-weight: 500;
     font-family: Montserrat;
     color: var(--primary-text-color);
-    background-color: #FAFAFA;
+    background-color: #F3F3F3;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -955,14 +955,31 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
     /* Main contact */
 
 .contact {
-    background-color: #fff;
+    background-color: #FAFAFA;
+    padding: 42px 0px;
 }
 
 .contact__container {}
 
-.contact__body {}
+.contact__content {
+    padding: 0px 0px 20px 0px;
+}
 
-.contact__content {}
+
+
+@media (min-width: 767px) {
+    .contact__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+
+    .contact__content {
+        padding: 0px 20px 0px 0px;
+    }
+}
+
+
 
 .contact__title {
     font-weight: 700;
@@ -970,6 +987,10 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
     line-height: 133%;
     letter-spacing: 0.1px;
     color: var(--primary-text-color);
+}
+
+.contact__title:not(:last-child) {
+    margin: 0px 0px 10px 0px;
 }
 
 .contact__text {
@@ -983,14 +1004,20 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
     flex-direction: column;
     align-items: center;
     padding: 15px 40px;
-    background: var(--orange-color);
+    background-color: var(--orange-color);
     border-radius: 5px;
+    min-height: 58px;
+    transition: background-color all 0.3s ease 0s;
 
     font-weight: 700;
     line-height: 200%;
     text-align: center;
     letter-spacing: 0.2px;
     color: #FFFFFF;
+}
+
+.contact_button:hover {
+    background-color: #ec4a0a;
 }
 
 @media (max-width: 1080px) {
